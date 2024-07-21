@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start</title>
-</head>
-<body>
-    <h1 class="title">Klicke auf die einzelen Projekte</h1>
-    <br><br><br>
-    <ul>
-        <a href="https://tigerkopf.github.io/ribeka/aform"><li>Aufträge formularisch erfassen</li></a>
-    </ul> 
-</body>
-</html>
+<?php
+
+session_start();
+ob_start();
+error_reporting(-1);
+ini_set('display_errors', 'On');
+
+$data = '/data';
+
+define('CONFIG_DIR', __DIR__ . $data . '/config');
+define('LOG_DIR', __DIR__ . $data . '/logs');
+define('ASSETS_DIR', __DIR__ . $data . '/assets');
+define('TEMPLATES_DIR', __DIR__ . $data . '/templates');
+define('STORAGE_DIR', __DIR__ . $data . '/storage');
+define('FUNCTION_DIR', __DIR__ . $data . '/function');
+define('STYLE_DIR',__DIR__. $data . '/library');
+define('BACKEND',__DIR__. $data . '/backend');
+define('IMG',__DIR__. $data . '/img');
+define('VENDOR',__DIR__. $data . '/vendor');
+define('PHPMAILER',__DIR__. $data . '/PHPMailer/src');
+require __DIR__ . $data . '/includes.php';
